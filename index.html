@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Douceur Sucrée – Crêperie & Glacier</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet" />
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <a class="nav-logo" href="#accueil"> La Douceur Sucrée</a>
+  <ul class="nav-links">
+    <li><a href="#apropos">À propos</a></li>
+    <li><a href="#menu-crepes">Crêpes</a></li>
+    <li><a href="#menu-glaces">Glaces</a></li>
+    <li><a href="#avis">Avis</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="btn-nav" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Nous trouver</button>
+</nav>
+
+<!-- HERO -->
+<section id="accueil">
+  <span class="hero-badge"> Ouvert tous les jours !</span>
+  <h1 class="hero-titre">Crêpes & Glaces<br>à la folie</h1>
+  <p class="hero-sous">Des saveurs généreuses, des sourires garantis. Venez vivre une expérience sucrée inoubliable !</p>
+  <div class="hero-btns">
+    <a href="#menu-crepes" class="btn-primary"> Voir le menu</a>
+    <a href="#contact" class="btn-secondary">📍 Nous trouver</a>
+  </div>
+  <div class="hero-emojis">
+    <span>🥞</span><span>🍦</span><span>🍓</span><span>🍫</span>
+  </div>
+</section>
+
+<!-- À PROPOS -->
+<section id="apropos">
+  <div class="section-title">
+    <h2>Notre <span>histoire</span></h2>
+    <div class="underline-deco"></div>
+    <p>Fait avec amour, servi avec le sourire</p>
+  </div>
+  <div class="apropos-inner">
+    <div class="apropos-img">
+      <span class="big-emoji">🥞</span>
+      <div class="badge-flottant">⭐</div>
+    </div>
+    <div class="apropos-texte">
+      <h3>La Douceur Sucrée</h3>
+      <p>Née d'une passion pour les saveurs authentiques, notre crêperie-glacier vous propose le meilleur des deux mondes : des crêpes généreuses préparées à la minute et des glaces artisanales aux parfums colorés.</p>
+      <p>Chaque ingrédient est sélectionné avec soin pour vous offrir une expérience gustative festive et mémorable. Parce que la vie est trop courte pour se priver de douceur ! 🍓</p>
+      <div class="stat-row">
+        <div class="stat-box">
+          <div class="num">30+</div>
+          <div class="label">Recettes</div>
+        </div>
+        <div class="stat-box">
+          <div class="num">5★</div>
+          <div class="label">Note moy.</div>
+        </div>
+        <div class="stat-box">
+          <div class="num">100%</div>
+          <div class="label">Artisanal</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU CRÊPES -->
+<section id="menu-crepes">
+  <div class="section-title">
+    <h2>Nos <span>Crêpes</span></h2>
+    <div class="underline-deco"></div>
+    <p>Sucrées, gourmandes, irrésistibles</p>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-btn active" onclick="filterCrepes('toutes')">Toutes</button>
+    <button class="tab-btn" onclick="filterCrepes('classic')">Classiques</button>
+    <button class="tab-btn" onclick="filterCrepes('gourmande')">Gourmandes</button>
+    <button class="tab-btn" onclick="filterCrepes('fruitee')">Fruitées</button>
+  </div>
+
+  <div class="menu-grid" id="crepes-grid">
+    <!-- Rempli par JS -->
+  </div>
+</section>
+
+<!-- MENU GLACES -->
+<section id="menu-glaces">
+  <div class="section-title">
+    <h2>Nos <span>Glaces</span></h2>
+    <div class="underline-deco"></div>
+    <p>Parfums artisanaux, fraîcheur garantie</p>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-btn active" onclick="filterGlaces('toutes')">Toutes</button>
+    <button class="tab-btn" onclick="filterGlaces('coupe')">Coupes</button>
+    <button class="tab-btn" onclick="filterGlaces('cornet')">Cornets</button>
+    <button class="tab-btn" onclick="filterGlaces('special')">Spéciales</button>
+  </div>
+
+  <div class="menu-grid" id="glaces-grid">
+    <!-- Rempli par JS -->
+  </div>
+</section>
+
+<!-- AMBIANCE -->
+<section id="ambiance">
+  <div class="section-title">
+    <h2>L'<span>Ambiance</span></h2>
+    <div class="underline-deco"></div>
+    <p>Un endroit coloré où chaque visite est une fête</p>
+  </div>
+  <div class="ambiance-grid">
+    <div class="ambiance-cell">🥞</div>
+    <div class="ambiance-cell">🍓</div>
+    <div class="ambiance-cell">🍦</div>
+    <div class="ambiance-cell">🍫</div>
+    <div class="ambiance-cell">🎉</div>
+  </div>
+</section>
+
+<!-- AVIS -->
+<section id="avis">
+  <div class="section-title">
+    <h2>Ce qu'ils <span>disent</span></h2>
+    <div class="underline-deco"></div>
+    <p>Des clients comblés, des sourires partagés</p>
+  </div>
+  <div class="avis-grid">
+    <div class="avis-card">
+      <div class="avis-etoiles">★★★★★</div>
+      <p class="avis-texte">"La crêpe au Nutella est un pur bonheur ! L'ambiance est festive et le personnel adorable. Je reviens chaque semaine !"</p>
+      <div class="avis-auteur">— Aminata K. 🇨🇮</div>
+    </div>
+    <div class="avis-card">
+      <div class="avis-etoiles">★★★★★</div>
+      <p class="avis-texte">"Les glaces artisanales sont une révélation. Le parfum mangue-passion est divin. Meilleur glacier de la ville !"</p>
+      <div class="avis-auteur">— Jean-Paul M. 🇨🇮</div>
+    </div>
+    <div class="avis-card">
+      <div class="avis-etoiles">★★★★☆</div>
+      <p class="avis-texte">"Superbe découverte ! La coupe spéciale avec chantilly maison est à tomber. J'y emmène toute ma famille maintenant."</p>
+      <div class="avis-auteur">— Fatou D. 🇨🇮</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-title">
+    <h2>Nous <span>trouver</span></h2>
+    <div class="underline-deco"></div>
+    <p>On vous attend avec impatience !</p>
+  </div>
+  <div class="contact-inner">
+    <div class="contact-grid">
+      <div class="contact-item">
+        <span class="contact-label">📍 Adresse</span>
+        <span class="contact-val">Cocody, Rue des Jardins<br>Abidjan, Côte d'Ivoire</span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label"> Horaires</span>
+        <span class="contact-val">Lun – Sam : 10h – 22h<br>Dimanche : 11h – 21h</span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label"> Téléphone</span>
+        <span class="contact-val"><a href="tel:+2250700000000">+225 07 00 00 00 00</a></span>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label"> Email</span>
+        <span class="contact-val"><a href="mailto:contact@douceur-sucree.ci">contact@douceur-sucree.ci</a></span>
+      </div>
+    </div>
+    <div class="map-placeholder" style="padding:0;overflow:hidden;border-radius:16px;min-height:320px;">
+      <iframe
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-3.9900%2C5.3300%2C-3.9500%2C5.3700&layer=mapnik&marker=5.3506%2C-3.9700"
+        width="100%"
+        height="320"
+        style="border:none;border-radius:16px;display:block;"
+        allowfullscreen
+        loading="lazy"
+        title="Localisation Cocody – Abidjan">
+      </iframe>
+      <a
+        href="https://www.openstreetmap.org/?mlat=5.3506&mlon=-3.9700#map=15/5.3506/-3.9700"
+        target="_blank"
+        rel="noopener noreferrer"
+        style="display:block;text-align:center;font-size:.8rem;padding:.5rem;color:#999;">
+        📍 Voir sur OpenStreetMap
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- BOUTON ADMIN -->
+<button id="admin-toggle" title="Gérer les images" onclick="toggleAdmin()">🖼️</button>
+
+<!-- PANNEAU ADMIN -->
+
+<div id="admin-panel">
+  <div class="admin-title">🎨 Gérer les images</div>
+
+  <div class="drop-zone" id="drop-zone">
+    <span>📂</span>
+    Glissez une image ici<br>puis choisissez où la placer
+  </div>
+  <div id="drop-preview" style="display:none;margin-bottom:.8rem;text-align:center;">
+    <img id="drop-img-preview" style="max-height:80px;border-radius:10px;border:2px solid var(--sombre);" />
+    <p style="font-size:.8rem;color:#999;margin-top:.3rem;">Image prête — cliquez sur un article</p>
+    <button class="remove-btn" onclick="cancelDrop()" style="margin-top:.3rem;">✕ Annuler</button>
+  </div>
+
+  <div class="admin-section">
+    <div class="admin-section-label">🌟 Images Hero</div>
+    <div id="admin-hero-list"></div>
+  </div>
+  <div class="admin-section">
+    <div class="admin-section-label">🖼️ Galerie Ambiance</div>
+    <div id="admin-ambiance-list"></div>
+  </div>
+  <div class="admin-section">
+    <div class="admin-section-label">🥞 Crêpes</div>
+    <div id="admin-crepes-list"></div>
+  </div>
+  <div class="admin-section">
+    <div class="admin-section-label">🍦 Glaces</div>
+    <div id="admin-glaces-list"></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-logo"> La Douceur Sucrée</div>
+  <p>© 2025 La Douceur Sucrée · Crêperie & Glacier artisanal · Abidjan, Côte d'Ivoire</p>
+  <p style="margin-top:.5rem;font-size:.8rem;color:#666;">Fait avec beaucoup d'amour</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
