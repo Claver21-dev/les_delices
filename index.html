@@ -10,14 +10,20 @@
 <body>
 
 <!-- NAVBAR -->
-<nav>
+<nav id="mainNav">
   <a class="nav-logo" href="#accueil"> La Douceur Sucrée</a>
-  <ul class="nav-links">
+  <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
     <li><a href="#apropos">À propos</a></li>
     <li><a href="#menu-crepes">Crêpes</a></li>
     <li><a href="#menu-glaces">Glaces</a></li>
     <li><a href="#avis">Avis</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li class="nav-cta"><a href="#contact">📍 Nous trouver</a></li>
   </ul>
   <button class="btn-nav" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Nous trouver</button>
 </nav>
